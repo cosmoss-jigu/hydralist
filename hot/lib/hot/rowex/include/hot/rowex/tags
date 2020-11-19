@@ -1,0 +1,358 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALL_ENTRIES_USED_SIMD_COB_TRIE_INCREMENTAL	./HOTRowexNodeBase.hpp	/^constexpr uint32_t ALL_ENTRIES_USED_SIMD_COB_TRIE_INCREMENTAL = UINT32_MAX; \/\/32 1 bits$/;"	v
+END_ITERATOR	./HOTRowexIterator.hpp	/^	static HOTRowexSynchronizedIterator<ValueType, KeyExtractor> const END_ITERATOR;$/;"	m	class:hot::rowex::HOTRowexSynchronizedIterator
+END_TOKEN	./HOTRowexIteratorEndToken.hpp	/^	static HOTRowexChildPointer END_TOKEN;$/;"	m	struct:hot::rowex::HOTRowexIteratorEndTokenWorkaround
+END_TOKEN	./HOTRowexIteratorEndToken.hpp	/^template<int dummy> HOTRowexChildPointer HOTRowexIteratorEndTokenWorkaround<dummy>::END_TOKEN = {};$/;"	m	class:hot::rowex::HOTRowexIteratorEndTokenWorkaround
+EpochBasedMemoryReclamationStrategy	./EpochBasedMemoryReclamationStrategy.hpp	/^	EpochBasedMemoryReclamationStrategy() : mCurrentEpoch(0), mThreadSpecificInformations() {$/;"	f	class:hot::rowex::EpochBasedMemoryReclamationStrategy
+EpochBasedMemoryReclamationStrategy	./EpochBasedMemoryReclamationStrategy.hpp	/^class EpochBasedMemoryReclamationStrategy {$/;"	c	namespace:hot::rowex
+HOTRowex	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> HOTRowex<ValueType, KeyExtractor>::HOTRowex() : mRoot {}, mMemoryReclamation(EpochBasedMemoryReclamationStrategy::getInstance()) {$/;"	f	class:hot::rowex::HOTRowex
+HOTRowex	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> HOTRowex<ValueType, KeyExtractor>::HOTRowex(HOTRowex && other) : mRoot(other.mRoot), mMemoryReclamation(other.mMemoryReclamation) {$/;"	f	class:hot::rowex::HOTRowex
+HOTRowex	./HOTRowexInterface.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> struct HOTRowex {$/;"	s	namespace:hot::rowex
+HOTRowexChildPointer	./HOTRowexChildPointer.hpp	/^inline HOTRowexChildPointer::HOTRowexChildPointer() : mPointer(reinterpret_cast<intptr_t>(nullptr)) {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+HOTRowexChildPointer	./HOTRowexChildPointer.hpp	/^inline HOTRowexChildPointer::HOTRowexChildPointer(HOTRowexChildPointer const & other) : mPointer(other.mPointer.load(read_memory_order)) {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+HOTRowexChildPointer	./HOTRowexChildPointer.hpp	/^inline HOTRowexChildPointer::HOTRowexChildPointer(hot::commons::NodeType nodeAlgorithmType, HOTRowexNodeBase const *node)$/;"	f	class:hot::rowex::HOTRowexChildPointer
+HOTRowexChildPointer	./HOTRowexChildPointer.hpp	/^inline HOTRowexChildPointer::HOTRowexChildPointer(intptr_t leafValue)$/;"	f	class:hot::rowex::HOTRowexChildPointer
+HOTRowexChildPointer	./HOTRowexChildPointerInterface.hpp	/^class HOTRowexChildPointer {$/;"	c	namespace:hot::rowex
+HOTRowexFirstInsertLevel	./HOTRowexFirstInsertLevel.hpp	/^	HOTRowexFirstInsertLevel(InsertStackEntryType *firstEntry, hot::commons::InsertInformation const &insertInformation,$/;"	f	struct:hot::rowex::HOTRowexFirstInsertLevel
+HOTRowexFirstInsertLevel	./HOTRowexFirstInsertLevel.hpp	/^struct HOTRowexFirstInsertLevel {$/;"	s	namespace:hot::rowex
+HOTRowexInsertStack	./HOTRowexInsertStack.hpp	/^	HOTRowexInsertStack(HOTRowexChildPointer currentRoot, HOTRowexChildPointer* rootPointer, uint8_t const *newKeyBytes) : mLeafEntry(reinterpret_cast<EntryType*>(mRawStack)) {$/;"	f	struct:hot::rowex::HOTRowexInsertStack
+HOTRowexInsertStack	./HOTRowexInsertStack.hpp	/^struct HOTRowexInsertStack {$/;"	s	namespace:hot::rowex
+HOTRowexInsertStackEntry	./HOTRowexInsertStackEntry.hpp	/^	HOTRowexInsertStackEntry() {$/;"	f	class:hot::rowex::HOTRowexInsertStackEntry
+HOTRowexInsertStackEntry	./HOTRowexInsertStackEntry.hpp	/^class HOTRowexInsertStackEntry {$/;"	c	namespace:hot::rowex
+HOTRowexIteratorEndTokenWorkaround	./HOTRowexIteratorEndToken.hpp	/^struct HOTRowexIteratorEndTokenWorkaround {$/;"	s	namespace:hot::rowex
+HOTRowexIteratorStackEntry	./HOTRowexIteratorStackEntry.hpp	/^	HOTRowexIteratorStackEntry() {$/;"	f	class:hot::rowex::HOTRowexIteratorStackEntry
+HOTRowexIteratorStackEntry	./HOTRowexIteratorStackEntry.hpp	/^class HOTRowexIteratorStackEntry {$/;"	c	namespace:hot::rowex
+HOTRowexIteratorStackState	./HOTRowexIteratorStackState.hpp	/^	HOTRowexIteratorStackState(StackEntryType *rootEntry) : mRootEntry(rootEntry), mStackEntry(rootEntry),$/;"	f	struct:hot::rowex::HOTRowexIteratorStackState
+HOTRowexIteratorStackState	./HOTRowexIteratorStackState.hpp	/^	HOTRowexIteratorStackState(StackEntryType *rootEntry, int32_t bufferState, StackEntryType *stackEntry)$/;"	f	struct:hot::rowex::HOTRowexIteratorStackState
+HOTRowexIteratorStackState	./HOTRowexIteratorStackState.hpp	/^template<typename StackEntryType> struct HOTRowexIteratorStackState {$/;"	s	namespace:hot::rowex
+HOTRowexNode	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::HOTRowexNode(uint16_t const height, uint16_t const numberEntries, DiscriminativeBitsRepresentation const & discriminativeBitsRepresentation)$/;"	f	class:hot::rowex::HOTRowexNode
+HOTRowexNode	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> template<typename SourceDiscriminativeBitsRepresentation, typename SourcePartialKeyType> inline HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::HOTRowexNode($/;"	f	class:hot::rowex::HOTRowexNode
+HOTRowexNode	./HOTRowexNodeInterface.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> struct alignas(SIMD_COB_TRIE_NODE_ALIGNMENT) HOTRowexNode;$/;"	m	namespace:hot::rowex
+HOTRowexNodeBase	./HOTRowexNodeBase.hpp	/^HOTRowexNodeBase::HOTRowexNodeBase(uint16_t const height, hot::commons::NodeAllocationInformation const & nodeAllocationInformation)$/;"	f	class:hot::rowex::HOTRowexNodeBase
+HOTRowexSynchronizedIterator	./HOTRowexIterator.hpp	/^	inline HOTRowexSynchronizedIterator() : mRootPointerLocation(&HOTRowexIteratorEndToken::END_TOKEN), mCurrentBufferState(getBufferRoot()) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+HOTRowexSynchronizedIterator	./HOTRowexIterator.hpp	/^	inline HOTRowexSynchronizedIterator(HOTRowexChildPointer const * const & rootPointerLocation, HOTRowexChildPointer const & rootPointer, EpochBasedMemoryReclamationStrategy* memoryReclamationStrategy, MemoryGuard const & currentMemoryGuard) \/\/DESCEND or STORE$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+HOTRowexSynchronizedIterator	./HOTRowexIterator.hpp	/^	inline HOTRowexSynchronizedIterator(HOTRowexChildPointer const * rootPointerLocation, HOTRowexChildPointer const & rootPointer, KeyType const & searchKey, EpochBasedMemoryReclamationStrategy* memoryReclamationStrategy, MemoryGuard const & currentMemoryGuard)$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+HOTRowexSynchronizedIterator	./HOTRowexIterator.hpp	/^	inline HOTRowexSynchronizedIterator(HOTRowexChildPointer const * rootPointerLocation, HOTRowexChildPointer const & rootPointer, KeyType const & searchKey, bool isLowerBound, EpochBasedMemoryReclamationStrategy* memoryReclamationStrategy, MemoryGuard const & currentMemoryGuard)$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+HOTRowexSynchronizedIterator	./HOTRowexIterator.hpp	/^	inline HOTRowexSynchronizedIterator(const HOTRowexSynchronizedIterator<ValueType, KeyExtractor> & other) : mRootPointerLocation(other.mRootPointerLocation), mMemoryReclamationStrategy(other.mMemoryReclamationStrategy), mCurrentBufferState(getBufferRoot()) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+HOTRowexSynchronizedIterator	./HOTRowexIterator.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> class HOTRowexSynchronizedIterator {$/;"	c	namespace:hot::rowex
+HotRowexIteratorBufferState	./HOTRowexIteratorBufferState.hpp	/^	HotRowexIteratorBufferState(HOTRowexChildPointer * const & buffer) : mBuffer(buffer), mCurrentBufferIndex(0u), mCurrentBufferSize(0), mLastAccessedKey() {$/;"	f	struct:hot::rowex::HotRowexIteratorBufferState
+HotRowexIteratorBufferState	./HOTRowexIteratorBufferState.hpp	/^template<typename KeyType> struct HotRowexIteratorBufferState {$/;"	s	namespace:hot::rowex
+ITERATOR_FILL_BUFFER_STATE_ADVANCE	./HOTRowexIteratorBufferStates.hpp	/^	constexpr int32_t ITERATOR_FILL_BUFFER_STATE_ADVANCE = 2;$/;"	m	namespace:hot::rowex
+ITERATOR_FILL_BUFFER_STATE_ASCEND	./HOTRowexIteratorBufferStates.hpp	/^	constexpr int32_t ITERATOR_FILL_BUFFER_STATE_ASCEND = 3;$/;"	m	namespace:hot::rowex
+ITERATOR_FILL_BUFFER_STATE_DESCEND	./HOTRowexIteratorBufferStates.hpp	/^	constexpr int32_t ITERATOR_FILL_BUFFER_STATE_DESCEND = 0;$/;"	m	namespace:hot::rowex
+ITERATOR_FILL_BUFFER_STATE_END	./HOTRowexIteratorBufferStates.hpp	/^	constexpr int32_t ITERATOR_FILL_BUFFER_STATE_END = 4;$/;"	m	namespace:hot::rowex
+ITERATOR_FILL_BUFFER_STATE_STORE	./HOTRowexIteratorBufferStates.hpp	/^	constexpr int32_t ITERATOR_FILL_BUFFER_STATE_STORE = 1;$/;"	m	namespace:hot::rowex
+MAXIMUM_NUMBER_NUMBER_ENTRIES_IN_BUFFER	./HOTRowexIteratorBufferState.hpp	/^	static constexpr size_t MAXIMUM_NUMBER_NUMBER_ENTRIES_IN_BUFFER = 128u;$/;"	m	struct:hot::rowex::HotRowexIteratorBufferState
+MemoryGuard	./MemoryGuard.hpp	/^	MemoryGuard(EpochBasedMemoryReclamationStrategy* memoryReclamation) : mMemoryReclamation(memoryReclamation) {$/;"	f	class:hot::rowex::MemoryGuard
+MemoryGuard	./MemoryGuard.hpp	/^class MemoryGuard {$/;"	c	namespace:hot::rowex
+NEXT_EPOCH	./EpochBasedMemoryReclamationStrategy.hpp	/^	static uint32_t NEXT_EPOCH[3];$/;"	m	class:hot::rowex::EpochBasedMemoryReclamationStrategy
+NEXT_EPOCH	./EpochBasedMemoryReclamationStrategy.hpp	/^uint32_t EpochBasedMemoryReclamationStrategy::NEXT_EPOCH[3] = { 1, 2, 0 };$/;"	m	class:hot::rowex::EpochBasedMemoryReclamationStrategy
+NODE_ALGORITHM_TYPE_EXTRACTION_MASK	./HOTRowexChildPointer.hpp	/^constexpr intptr_t NODE_ALGORITHM_TYPE_EXTRACTION_MASK = 0x7u;$/;"	m	namespace:hot::rowex
+NODE_ALGORITH_TYPE_HELPER_EXTRACTION_MASK	./HOTRowexChildPointer.hpp	/^constexpr intptr_t NODE_ALGORITH_TYPE_HELPER_EXTRACTION_MASK = NODE_ALGORITHM_TYPE_EXTRACTION_MASK << 1;$/;"	m	namespace:hot::rowex
+NOT_IN_EPOCH	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^constexpr uint32_t NOT_IN_EPOCH = NUMBER_EPOCHS;$/;"	m	namespace:hot::rowex
+NUMBER_EPOCHS	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^constexpr uint32_t NUMBER_EPOCHS = 3;$/;"	m	namespace:hot::rowex
+NextPartialKeyType	./HOTRowexNode.hpp	/^template<> struct NextPartialKeyType<uint16_t> {$/;"	s	namespace:hot::rowex
+NextPartialKeyType	./HOTRowexNode.hpp	/^template<> struct NextPartialKeyType<uint32_t> {$/;"	s	namespace:hot::rowex
+NextPartialKeyType	./HOTRowexNode.hpp	/^template<> struct NextPartialKeyType<uint8_t> {$/;"	s	namespace:hot::rowex
+NextPartialKeyType	./HOTRowexNode.hpp	/^template<typename PartialKeyType> struct NextPartialKeyType {$/;"	s	namespace:hot::rowex
+POINTER_AND_IS_LEAF_VALUE_MASK	./HOTRowexChildPointer.hpp	/^constexpr intptr_t POINTER_AND_IS_LEAF_VALUE_MASK = 15u;$/;"	m	namespace:hot::rowex
+POINTER_EXTRACTION_MASK	./HOTRowexChildPointer.hpp	/^constexpr intptr_t POINTER_EXTRACTION_MASK = ~(POINTER_AND_IS_LEAF_VALUE_MASK);$/;"	m	namespace:hot::rowex
+PREVIOUS_EPOCH	./EpochBasedMemoryReclamationStrategy.hpp	/^	static uint32_t PREVIOUS_EPOCH[3];$/;"	m	class:hot::rowex::EpochBasedMemoryReclamationStrategy
+PREVIOUS_EPOCH	./EpochBasedMemoryReclamationStrategy.hpp	/^uint32_t EpochBasedMemoryReclamationStrategy::PREVIOUS_EPOCH[3] = { 2, 0, 1 };$/;"	m	class:hot::rowex::EpochBasedMemoryReclamationStrategy
+SIMD_COB_TRIE_NODE_ALIGNMENT	./HOTRowexNodeBaseInterface.hpp	/^constexpr size_t SIMD_COB_TRIE_NODE_ALIGNMENT = 8;$/;"	m	namespace:hot::rowex
+SpinLock	./SpinLock.hpp	/^	SpinLock() : mFlag(ATOMIC_FLAG_INIT) {$/;"	f	class:hot::rowex::SpinLock
+SpinLock	./SpinLock.hpp	/^class SpinLock {$/;"	c	namespace:hot::rowex
+ThreadSpecificEpochBasedReclamationInformation	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^	ThreadSpecificEpochBasedReclamationInformation() : mFreeLists(), mLocalEpoch(NOT_IN_EPOCH), mPreviouslyAccessedEpoch(NOT_IN_EPOCH), mThreadWantsToAdvance(false)  {$/;"	f	class:hot::rowex::ThreadSpecificEpochBasedReclamationInformation
+ThreadSpecificEpochBasedReclamationInformation	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^class ThreadSpecificEpochBasedReclamationInformation {$/;"	c	namespace:hot::rowex
+ToDiscriminativeBitsRepresentation	./HOTRowexNode.hpp	/^template<> struct ToDiscriminativeBitsRepresentation<hot::commons::MultiMaskPartialKeyMapping<2u>, uint32_t> {$/;"	s	namespace:hot::rowex
+ToDiscriminativeBitsRepresentation	./HOTRowexNode.hpp	/^template<typename NewDiscriminativeBitsRepresentation, typename PartialKeyType> struct ToDiscriminativeBitsRepresentation {$/;"	s	namespace:hot::rowex
+ToPartialKeyType	./HOTRowexNode.hpp	/^template<> struct ToPartialKeyType<hot::commons::MultiMaskPartialKeyMapping<2>, uint8_t> {$/;"	s	namespace:hot::rowex
+ToPartialKeyType	./HOTRowexNode.hpp	/^template<> struct ToPartialKeyType<hot::commons::MultiMaskPartialKeyMapping<4>, uint16_t> {$/;"	s	namespace:hot::rowex
+ToPartialKeyType	./HOTRowexNode.hpp	/^template<typename NewDiscriminativeBitsRepresentation, typename ExistingPartialKeyType> struct ToPartialKeyType {$/;"	s	namespace:hot::rowex
+__HOT_EPOCH_BASED_MEMORY_RECLAMATION_STRATEGY__	./EpochBasedMemoryReclamationStrategy.hpp	2;"	d
+__HOT__ROWEX__CHILD_POINTER_INTERFACE__	./HOTRowexChildPointerInterface.hpp	2;"	d
+__HOT__ROWEX__CHILD_POINTER__	./HOTRowexChildPointer.hpp	2;"	d
+__HOT__ROWEX__FILL_BUFFER_STATES__	./HOTRowexIteratorBufferStates.hpp	2;"	d
+__HOT__ROWEX__FIRST_INSERT_LEVEL__	./HOTRowexFirstInsertLevel.hpp	2;"	d
+__HOT__ROWEX__HOT_ROWEX_INTERFACE__	./HOTRowexInterface.hpp	2;"	d
+__HOT__ROWEX__HOT_ROWEX__	./HOTRowex.hpp	2;"	d
+__HOT__ROWEX__INSERT_STACK__	./HOTRowexInsertStack.hpp	2;"	d
+__HOT__ROWEX__ITERATE_STACK_STATE__	./HOTRowexIteratorStackState.hpp	2;"	d
+__HOT__ROWEX__ITERATOR_BUFFER_STATE__	./HOTRowexIteratorBufferState.hpp	2;"	d
+__HOT__ROWEX__ITERATOR_END_TOKEN__	./HOTRowexIteratorEndToken.hpp	2;"	d
+__HOT__ROWEX__LOCKABLE_INSERT_STACK_ENTRY___	./HOTRowexInsertStackEntry.hpp	2;"	d
+__HOT__ROWEX__MEMORY_GUARD__	./MemoryGuard.hpp	2;"	d
+__HOT__ROWEX__NODE_INTERFACE__	./HOTRowexNodeInterface.hpp	2;"	d
+__HOT__ROWEX__SIMD_COB_TRIE_BASE_NODE_INTERFACE__	./HOTRowexNodeBaseInterface.hpp	2;"	d
+__HOT__ROWEX__SIMD_COB_TRIE_NODE_BASE__	./HOTRowexNodeBase.hpp	2;"	d
+__HOT__ROWEX__SIMD_COB_TRIE_NODE__	./HOTRowexNode.hpp	2;"	d
+__HOT__ROWEX__SPIN_LOCK__	./SpinLock.hpp	2;"	d
+__HOT__ROWEX__SYNCHRONIZED_ITERATOR_STACK_ENTRY__	./HOTRowexIteratorStackEntry.hpp	2;"	d
+__HOT__ROWEX__SYNCHRONIZED_ITERATOR__	./HOTRowexIterator.hpp	2;"	d
+__HOT__ROWEX__THREAD_SPECIFIC_MEMORY_INFORMATION__	./ThreadSpecificEpochBasedReclamationInformation.hpp	2;"	d
+addEntry	./HOTRowexNode.hpp	/^HOTRowexChildPointer HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::addEntry($/;"	f	class:hot::rowex::HOTRowexNode
+advance	./HOTRowexIteratorBufferState.hpp	/^	void advance() {$/;"	f	struct:hot::rowex::HotRowexIteratorBufferState
+advance	./HOTRowexIteratorStackEntry.hpp	/^	void advance() {$/;"	f	class:hot::rowex::HOTRowexIteratorStackEntry
+ascendOrAdvance	./HOTRowexIterator.hpp	/^	static inline int32_t ascendOrAdvance(HOTRowexIteratorStackEntry const * const currentStackEntry) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+begin	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline typename HOTRowex<ValueType, KeyExtractor>::const_iterator HOTRowex<ValueType, KeyExtractor>::begin() const {$/;"	f	class:hot::rowex::HOTRowex
+begin	./HOTRowexIterator.hpp	/^	static inline HOTRowexSynchronizedIterator begin(HOTRowexChildPointer const * rootPointerLocation, EpochBasedMemoryReclamationStrategy * const & memoryReclamationStrategy) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+begin	./HOTRowexNodeBase.hpp	/^inline typename HOTRowexNodeBase::const_iterator HOTRowexNodeBase::begin() const$/;"	f	class:hot::rowex::HOTRowexNodeBase
+begin	./HOTRowexNodeBase.hpp	/^inline typename HOTRowexNodeBase::iterator HOTRowexNodeBase::begin()$/;"	f	class:hot::rowex::HOTRowexNodeBase
+calculatePointerSize	./HOTRowexNode.hpp	/^constexpr uint32_t calculatePointerSize(uint16_t const numberEntries) {$/;"	f	namespace:hot::rowex
+canAdvance	./EpochBasedMemoryReclamationStrategy.hpp	/^	bool canAdvance(uint32_t currentEpoch) {$/;"	f	class:hot::rowex::EpochBasedMemoryReclamationStrategy
+canAdvance	./HOTRowexIteratorBufferState.hpp	/^	bool canAdvance() {$/;"	f	struct:hot::rowex::HotRowexIteratorBufferState
+castToNode	./HOTRowexChildPointer.hpp	/^template<hot::commons::NodeType nodeAlgorithmType> inline auto HOTRowexChildPointer::castToNode(HOTRowexNodeBase * node) {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+castToNode	./HOTRowexChildPointer.hpp	/^template<hot::commons::NodeType nodeAlgorithmType> inline auto HOTRowexChildPointer::castToNode(HOTRowexNodeBase const * node) {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+collectEntryDepth	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> inline void HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::collectEntryDepth(std::array<uint8_t, 32> & entryDepths, size_t minEntryIndexInRange, size_t numberEntriesInRange, size_t currentDepth, uint32_t usedMaskBits) const {$/;"	f	class:hot::rowex::HOTRowexNode
+collectStatsForSubtree	./HOTRowex.hpp	/^inline void HOTRowex<ValueType, KeyExtractor>::collectStatsForSubtree($/;"	f	class:hot::rowex::HOTRowex
+compareAndSwap	./HOTRowexChildPointer.hpp	/^bool HOTRowexChildPointer::compareAndSwap(HOTRowexChildPointer const & expected, HOTRowexChildPointer const & newValue) {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+compareKeys	./HOTRowex.hpp	/^	HOTRowex<ValueType, KeyExtractor>::compareKeys;$/;"	m	class:hot::rowex::HOTRowex
+compareKeys	./HOTRowexInterface.hpp	/^	static typename idx::contenthelpers::KeyComparator<KeyType>::type compareKeys;$/;"	m	struct:hot::rowex::HOTRowex
+compressEntries	./HOTRowexNode.hpp	/^HOTRowexChildPointer HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::compressEntries(uint32_t firstIndexInRange, uint16_t numberEntriesInRange) const$/;"	f	class:hot::rowex::HOTRowexNode
+compressEntriesAndAddOneEntryIntoNewNode	./HOTRowexNode.hpp	/^HOTRowexChildPointer HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::compressEntriesAndAddOneEntryIntoNewNode($/;"	f	class:hot::rowex::HOTRowexNode
+convertNumbeEntriesToEntriesMask	./HOTRowexNode.hpp	/^constexpr static uint32_t convertNumbeEntriesToEntriesMask(uint16_t numberEntries) {$/;"	f	namespace:hot::rowex
+copy	./HOTRowexIteratorBufferState.hpp	/^	void copy(HotRowexIteratorBufferState const & other) {$/;"	f	struct:hot::rowex::HotRowexIteratorBufferState
+deleteSubtree	./HOTRowexChildPointer.hpp	/^inline void HOTRowexChildPointer::deleteSubtree() {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+descendOrStore	./HOTRowexIterator.hpp	/^	static inline int32_t descendOrStore(HOTRowexIteratorStackEntry const * const currentStackEntry) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+determineInsertLevel	./HOTRowexInsertStack.hpp	/^	HOTRowexFirstInsertLevel<EntryType> determineInsertLevel(hot::commons::DiscriminativeBit const & mismatchingBit) {$/;"	f	struct:hot::rowex::HOTRowexInsertStack
+doesThreadWantToAdvanceEpoch	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^	bool doesThreadWantToAdvanceEpoch() {$/;"	f	class:hot::rowex::ThreadSpecificEpochBasedReclamationInformation
+end	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline typename HOTRowex<ValueType, KeyExtractor>::const_iterator const & HOTRowex<ValueType, KeyExtractor>::end() const {$/;"	f	class:hot::rowex::HOTRowex::HOTRowex
+end	./HOTRowexIterator.hpp	/^	static inline HOTRowexSynchronizedIterator const & end() {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+end	./HOTRowexIteratorStackState.hpp	/^	void end() {$/;"	f	struct:hot::rowex::HOTRowexIteratorStackState
+end	./HOTRowexNodeBase.hpp	/^inline typename HOTRowexNodeBase::const_iterator HOTRowexNodeBase::end() const$/;"	f	class:hot::rowex::HOTRowexNodeBase
+end	./HOTRowexNodeBase.hpp	/^inline typename HOTRowexNodeBase::iterator HOTRowexNodeBase::end()$/;"	f	class:hot::rowex::HOTRowexNodeBase
+endOfDataReached	./HOTRowexIteratorBufferState.hpp	/^	bool endOfDataReached() {$/;"	f	struct:hot::rowex::HotRowexIteratorBufferState
+enter	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^	void enter(uint32_t newEpoch) {$/;"	f	class:hot::rowex::ThreadSpecificEpochBasedReclamationInformation
+enterCriticalSection	./EpochBasedMemoryReclamationStrategy.hpp	/^	void enterCriticalSection() {$/;"	f	class:hot::rowex::EpochBasedMemoryReclamationStrategy
+executeForSpecificNodeType	./HOTRowexChildPointer.hpp	/^template<typename Operation> inline auto HOTRowexChildPointer::executeForSpecificNodeType(bool const withPrefetch, Operation const & operation) const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+executeForSpecificNodeType	./HOTRowexChildPointer.hpp	/^template<typename Operation> inline auto HOTRowexChildPointer::executeForSpecificNodeType(bool const withPrefetch, Operation const & operation) {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+extractKey	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> KeyExtractor<ValueType> HOTRowex<ValueType, KeyExtractor>::extractKey;$/;"	m	class:hot::rowex::HOTRowex
+extractKey	./HOTRowexInsertStack.hpp	/^	static KeyExtractor<ValueType> extractKey;$/;"	m	struct:hot::rowex::HOTRowexInsertStack
+extractKey	./HOTRowexInsertStack.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor, typename InsertStackEntry> KeyExtractor<ValueType> HOTRowexInsertStack<ValueType, KeyExtractor, InsertStackEntry>::extractKey;$/;"	m	class:hot::rowex::HOTRowexInsertStack
+extractKey	./HOTRowexInterface.hpp	/^	static KeyExtractor<ValueType> extractKey;$/;"	m	struct:hot::rowex::HOTRowex
+extractKey	./HOTRowexIterator.hpp	/^	static KeyExtractor<ValueType> extractKey;$/;"	m	class:hot::rowex::HOTRowexSynchronizedIterator
+extractKey	./HOTRowexIterator.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> KeyExtractor<ValueType> HOTRowexSynchronizedIterator<ValueType, KeyExtractor>::extractKey;$/;"	m	class:hot::rowex::HOTRowexSynchronizedIterator
+fillBuffer	./HOTRowexIterator.hpp	/^	static inline HotRowexIteratorBufferState<KeyType> fillBuffer(HotRowexIteratorBufferState<KeyType> iteratorBufferState, HOTRowexSynchronizedIteratorStackState stackState, MemoryGuard const & \/* guard *\/) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+fillBufferForBound	./HOTRowexIterator.hpp	/^	static inline HotRowexIteratorBufferState<KeyType> fillBufferForBound(HOTRowexChildPointer * const & bufferRoot, HOTRowexIteratorStackEntry * currentStackRoot, HOTRowexChildPointer const * rootPointerLocation, HOTRowexChildPointer const & rootPointer, KeyType const & searchKey, bool isLowerBound, MemoryGuard const &guard) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+fillBufferForBoundWithByteKey	./HOTRowexIterator.hpp	/^	static inline HotRowexIteratorBufferState<KeyType> fillBufferForBoundWithByteKey(HOTRowexChildPointer * const & bufferRoot, HOTRowexIteratorStackEntry * currentStackRoot, HOTRowexChildPointer const * rootPointerLocation, HOTRowexChildPointer const & rootPointer, uint8_t const* searchKeyBytes, bool isLowerBound, MemoryGuard const &guard) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+finalParentPullUp	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline void HOTRowex<ValueType, KeyExtractor>::finalParentPullUp(typename HOTRowex<ValueType, KeyExtractor>::InsertStackEntryType & currentNodeStackEntry, hot::commons::BiNode<HOTRowexChildPointer> const & splitEntries) {$/;"	f	class:hot::rowex::HOTRowex
+find	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline typename HOTRowex<ValueType, KeyExtractor>::const_iterator HOTRowex<ValueType, KeyExtractor>::find(typename HOTRowex<ValueType, KeyExtractor>::KeyType const & searchKey) const {$/;"	f	class:hot::rowex::HOTRowex
+find	./HOTRowexIterator.hpp	/^	static inline HOTRowexSynchronizedIterator find(HOTRowexChildPointer const * rootPointerLocation, KeyType const & searchKey, EpochBasedMemoryReclamationStrategy * const & memoryReclamationStrategy) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+free	./HOTRowexChildPointer.hpp	/^inline void HOTRowexChildPointer::free() const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+freeForEpoch	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^	void freeForEpoch(uint32_t epoch) {$/;"	f	class:hot::rowex::ThreadSpecificEpochBasedReclamationInformation
+getBinaryTrieValueDistribution	./HOTRowex.hpp	/^inline void HOTRowex<ValueType, KeyExtractor>::getBinaryTrieValueDistribution($/;"	f	class:hot::rowex::HOTRowex
+getBounded	./HOTRowexIterator.hpp	/^	static inline HOTRowexSynchronizedIterator getBounded(HOTRowexChildPointer const * rootPointer, KeyType const & searchKey, bool isLowerBound, EpochBasedMemoryReclamationStrategy * const & memoryReclamationStrategy) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+getBufferRoot	./HOTRowexIterator.hpp	/^	HOTRowexChildPointer * getBufferRoot()  {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+getBufferRoot	./HOTRowexIterator.hpp	/^	HOTRowexChildPointer const * getBufferRoot()  const {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+getChildPointer	./HOTRowexInsertStackEntry.hpp	/^	HOTRowexChildPointer getChildPointer() const {$/;"	f	class:hot::rowex::HOTRowexInsertStackEntry
+getConversionInformation	./HOTRowexNode.hpp	/^HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::getConversionInformation($/;"	f	class:hot::rowex::HOTRowexNode
+getConversionInformation	./HOTRowexNode.hpp	/^typename HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::PartialKeyConversionInformation HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::getConversionInformation($/;"	f	class:hot::rowex::HOTRowexNode
+getConversionInformationForCompressionMask	./HOTRowexNode.hpp	/^typename HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::PartialKeyConversionInformation HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::getConversionInformationForCompressionMask($/;"	f	class:hot::rowex::HOTRowexNode
+getCurrent	./HOTRowexIteratorBufferState.hpp	/^	HOTRowexChildPointer const & getCurrent() const {$/;"	f	struct:hot::rowex::HotRowexIteratorBufferState
+getCurrent	./HOTRowexIteratorStackEntry.hpp	/^	HOTRowexChildPointer const & getCurrent() const {$/;"	f	class:hot::rowex::HOTRowexIteratorStackEntry
+getCurrentPointerLocation	./HOTRowexIteratorStackEntry.hpp	/^	HOTRowexChildPointer const * getCurrentPointerLocation() const {$/;"	f	class:hot::rowex::HOTRowexIteratorStackEntry
+getDiscriminativeBits	./HOTRowexChildPointer.hpp	/^inline std::set<uint16_t> HOTRowexChildPointer::getDiscriminativeBits() const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+getEntryDepths	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> inline std::array<uint8_t, 32> HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::getEntryDepths() const {$/;"	f	class:hot::rowex::HOTRowexNode
+getExtractionMaskToEntriesMasksMapping	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> inline std::map<uint16_t, uint16_t> HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::getExtractionMaskToEntriesMasksMapping() const {$/;"	f	class:hot::rowex::HOTRowexNode
+getHeight	./HOTRowexChildPointer.hpp	/^inline uint16_t HOTRowexChildPointer::getHeight() const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+getInsertInformation	./HOTRowexInsertStackEntry.hpp	/^	inline hot::commons::InsertInformation getInsertInformation(hot::commons::DiscriminativeBit const & mismatchingBit)  const {$/;"	f	class:hot::rowex::HOTRowexInsertStackEntry
+getInsertInformation	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> inline hot::commons::InsertInformation HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::getInsertInformation($/;"	f	class:hot::rowex::HOTRowexNode
+getInstance	./EpochBasedMemoryReclamationStrategy.hpp	/^	static EpochBasedMemoryReclamationStrategy* getInstance() {$/;"	f	class:hot::rowex::EpochBasedMemoryReclamationStrategy
+getInstance	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> HOTRowex<ValueType, KeyExtractor>::HOTRowex() : mRoot {}, mMemoryReclamation(EpochBasedMemoryReclamationStrategy::getInstance()) {$/;"	f	namespace:hot::rowex
+getIteratorStackDepth	./HOTRowexIterator.hpp	/^	inline static int64_t getIteratorStackDepth(HOTRowexIteratorStackEntry const * rootStackEntry, HOTRowexIteratorStackEntry const * currentStackEntry) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+getKeyForChildPointer	./HOTRowexIterator.hpp	/^	static inline KeyType getKeyForChildPointer(HOTRowexChildPointer const & childPointer) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+getKeyForStackEntry	./HOTRowexIterator.hpp	/^	static inline KeyType getKeyForStackEntry(HOTRowexIteratorStackEntry const * iteratorStackEntry) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+getLargestLeafValueInSubtree	./HOTRowexChildPointer.hpp	/^inline HOTRowexChildPointer HOTRowexChildPointer::getLargestLeafValueInSubtree() const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+getLastAccessedKey	./HOTRowexIteratorBufferState.hpp	/^	const uint8_t* getLastAccessedKey() {$/;"	f	struct:hot::rowex::HotRowexIteratorBufferState
+getLeastSignificantDiscriminativeBitForEntry	./HOTRowexNode.hpp	/^uint16_t HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::getLeastSignificantDiscriminativeBitForEntry($/;"	f	class:hot::rowex::HOTRowexNode
+getLocalEpoch	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^	uint32_t getLocalEpoch() const {$/;"	f	class:hot::rowex::ThreadSpecificEpochBasedReclamationInformation
+getMaskForLargerEntries	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> inline uint32_t HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::getMaskForLargerEntries() const {$/;"	f	class:hot::rowex::HOTRowexNode
+getMismatchingBit	./HOTRowexInsertStack.hpp	/^	idx::contenthelpers::OptionalValue<hot::commons::DiscriminativeBit> getMismatchingBit(uint8_t const *newKeyBytes) const {$/;"	f	struct:hot::rowex::HOTRowexInsertStack
+getNode	./HOTRowexChildPointer.hpp	/^inline HOTRowexNodeBase* HOTRowexChildPointer::getNode() const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+getNode	./HOTRowexInsertStackEntry.hpp	/^	HOTRowexNodeBase* getNode() {$/;"	f	class:hot::rowex::HOTRowexInsertStackEntry
+getNodeAllocationInformation	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> inline hot::commons::NodeAllocationInformation HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::getNodeAllocationInformation(uint16_t const numberEntries) {$/;"	f	class:hot::rowex::HOTRowexNode
+getNodeAtPath	./HOTRowex.hpp	/^inline HOTRowexChildPointer HOTRowex<ValueType, KeyExtractor>::getNodeAtPath(std::initializer_list<unsigned int> path) {$/;"	f	class:hot::rowex::HOTRowex
+getNodeSizeInBytes	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> inline size_t HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::getNodeSizeInBytes() const {$/;"	f	class:hot::rowex::HOTRowexNode
+getNodeType	./HOTRowexChildPointer.hpp	/^inline hot::commons::NodeType HOTRowexChildPointer::getNodeType() const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+getNumberEntries	./HOTRowexChildPointer.hpp	/^inline unsigned int HOTRowexChildPointer::getNumberEntries() const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+getNumberEntries	./HOTRowexNodeBase.hpp	/^inline size_t HOTRowexNodeBase::getNumberEntries() const {$/;"	f	class:hot::rowex::HOTRowexNodeBase
+getPointers	./HOTRowexNodeBase.hpp	/^inline HOTRowexChildPointer * HOTRowexNodeBase::getPointers()  {$/;"	f	class:hot::rowex::HOTRowexNodeBase
+getPointers	./HOTRowexNodeBase.hpp	/^inline HOTRowexChildPointer const * HOTRowexNodeBase::getPointers() const {$/;"	f	class:hot::rowex::HOTRowexNodeBase
+getRawStack	./HOTRowexInsertStack.hpp	/^	EntryType const * getRawStack() const {$/;"	f	struct:hot::rowex::HOTRowexInsertStack
+getRawStack	./HOTRowexInsertStack.hpp	/^	EntryType* getRawStack() {$/;"	f	struct:hot::rowex::HOTRowexInsertStack
+getSmallestLeafValueInSubtree	./HOTRowexChildPointer.hpp	/^inline HOTRowexChildPointer HOTRowexChildPointer::getSmallestLeafValueInSubtree() const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+getStackRoot	./HOTRowexIterator.hpp	/^	HOTRowexIteratorStackEntry const * getStackRoot() const {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+getStackRoot	./HOTRowexIterator.hpp	/^	HOTRowexIteratorStackEntry* getStackRoot() {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+getStatistics	./HOTRowex.hpp	/^std::pair<size_t, std::map<std::string, double>> HOTRowex<ValueType, KeyExtractor>::getStatistics() const {$/;"	f	class:hot::rowex::HOTRowex
+getTid	./HOTRowexChildPointer.hpp	/^inline intptr_t HOTRowexChildPointer::getTid() const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+getValueDistribution	./HOTRowex.hpp	/^inline void HOTRowex<ValueType, KeyExtractor>::getValueDistribution($/;"	f	class:hot::rowex::HOTRowex
+hot	./EpochBasedMemoryReclamationStrategy.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowex.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexChildPointer.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexChildPointerInterface.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexFirstInsertLevel.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexInsertStack.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexInsertStackEntry.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexInterface.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexIterator.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexIteratorBufferState.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexIteratorBufferStates.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexIteratorEndToken.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexIteratorStackEntry.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexIteratorStackState.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexNode.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexNodeBase.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexNodeBaseInterface.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./HOTRowexNodeInterface.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./MemoryGuard.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./SpinLock.hpp	/^namespace hot { namespace rowex {$/;"	n
+hot	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^namespace hot { namespace rowex {$/;"	n
+init	./HOTRowexIteratorStackEntry.hpp	/^	HOTRowexIteratorStackEntry * init(HOTRowexChildPointer const * const & currentPointerLocation, HOTRowexChildPointer const & current, HOTRowexChildPointer const * const & end) {$/;"	f	class:hot::rowex::HOTRowexIteratorStackEntry
+init	./HOTRowexIteratorStackEntry.hpp	/^	HOTRowexIteratorStackEntry * init(HOTRowexChildPointer const * const & currentPointerLocation, HOTRowexChildPointer const * const & end) {$/;"	f	class:hot::rowex::HOTRowexIteratorStackEntry
+initChildPointer	./HOTRowexInsertStackEntry.hpp	/^	inline void initChildPointer(HOTRowexChildPointer* childPointerLocation, HOTRowexChildPointer const & childPointer) {$/;"	f	class:hot::rowex::HOTRowexInsertStackEntry
+initLeaf	./HOTRowexInsertStackEntry.hpp	/^	inline void initLeaf(HOTRowexChildPointer* childPointerLocation, HOTRowexChildPointer const & childPointer) {$/;"	f	class:hot::rowex::HOTRowexInsertStackEntry
+initNode	./HOTRowexInsertStackEntry.hpp	/^	inline void initNode(HOTRowexChildPointer* childPointerLocation, HOTRowexChildPointer const & childPointer) {$/;"	f	class:hot::rowex::HOTRowexInsertStackEntry
+initializeBufferForKey	./HOTRowexIterator.hpp	/^	static inline HotRowexIteratorBufferState<KeyType> initializeBufferForKey(HOTRowexChildPointer * const & bufferRoot, HOTRowexIteratorStackEntry * const rootStackEntry, HOTRowexChildPointer const * rootPointerLocation, HOTRowexChildPointer const & rootPointer, KeyType const & searchKey, MemoryGuard const & guard) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+insert	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline bool HOTRowex<ValueType, KeyExtractor>::insert(ValueType const & value) {$/;"	f	class:hot::rowex::HOTRowex
+insertForStackRange	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline idx::contenthelpers::OptionalValue<bool> HOTRowex<ValueType, KeyExtractor>::insertForStackRange(typename HOTRowex<ValueType, KeyExtractor>::InsertStackType & insertStack, const HOTRowexFirstInsertLevel<InsertStackEntryType> & insertLevel, unsigned int numberLockedEntries, ValueType const & valueToInsert) {$/;"	f	class:hot::rowex::HOTRowex
+insertGuarded	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline bool HOTRowex<ValueType, KeyExtractor>::insertGuarded(ValueType const & value) {$/;"	f	class:hot::rowex::HOTRowex
+insertNewValue	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline idx::contenthelpers::OptionalValue<bool> HOTRowex<ValueType, KeyExtractor>::insertNewValue(typename HOTRowex<ValueType, KeyExtractor>::InsertStackType & insertStack, hot::commons::DiscriminativeBit const & newBit, ValueType const & value) {$/;"	f	class:hot::rowex::HOTRowex
+integrateAndSplit	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline hot::commons::BiNode<HOTRowexChildPointer> HOTRowex<ValueType, KeyExtractor>::integrateAndSplit(typename HOTRowex<ValueType, KeyExtractor>::InsertStackEntryType & currentInsertStackEntry, hot::commons::BiNode<HOTRowexChildPointer> const & splitEntries) {$/;"	f	class:hot::rowex::HOTRowex
+isAValidNode	./HOTRowexChildPointer.hpp	/^inline bool HOTRowexChildPointer::isAValidNode() const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+isConsistent	./HOTRowexInsertStack.hpp	/^	bool isConsistent(EntryType* firstLockedEntry, unsigned int numberLockedEntries) {$/;"	f	struct:hot::rowex::HOTRowexInsertStack
+isConsistent	./HOTRowexInsertStackEntry.hpp	/^	bool isConsistent() const {$/;"	f	class:hot::rowex::HOTRowexInsertStackEntry
+isEmpty	./HOTRowexChildPointer.hpp	/^inline bool HOTRowexChildPointer::isEmpty() const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+isEmpty	./HOTRowexIteratorBufferState.hpp	/^	bool isEmpty() {$/;"	f	struct:hot::rowex::HotRowexIteratorBufferState
+isFull	./HOTRowexIteratorBufferState.hpp	/^	bool isFull() {$/;"	f	struct:hot::rowex::HotRowexIteratorBufferState
+isFull	./HOTRowexNodeBase.hpp	/^inline bool HOTRowexNodeBase::isFull() const {$/;"	f	class:hot::rowex::HOTRowexNodeBase
+isLastElement	./HOTRowexIteratorStackEntry.hpp	/^	bool isLastElement() const {$/;"	f	class:hot::rowex::HOTRowexIteratorStackEntry
+isLeaf	./HOTRowexChildPointer.hpp	/^inline bool HOTRowexChildPointer::isLeaf() const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+isLeaf	./HOTRowexChildPointer.hpp	/^inline bool HOTRowexChildPointer::isLeaf(intptr_t currentPointerValue) const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+isLeafInt	./HOTRowexChildPointer.hpp	/^inline intptr_t HOTRowexChildPointer::isLeafInt() const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+isNode	./HOTRowexChildPointer.hpp	/^inline bool HOTRowexChildPointer::isNode() const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+isNode	./HOTRowexChildPointer.hpp	/^inline bool HOTRowexChildPointer::isNode(intptr_t currentPointerValue) const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+isObsolete	./HOTRowexInsertStackEntry.hpp	/^	bool isObsolete() {$/;"	f	class:hot::rowex::HOTRowexInsertStackEntry
+isObsolete	./HOTRowexNodeBase.hpp	/^inline bool HOTRowexNodeBase::isObsolete() const {$/;"	f	class:hot::rowex::HOTRowexNodeBase
+isPartitionCorrect	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> inline bool HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::isPartitionCorrect() const {$/;"	f	class:hot::rowex::HOTRowexNode
+isSingleEntryAffected	./HOTRowexInsertStackEntry.hpp	/^	inline bool isSingleEntryAffected(hot::commons::InsertInformation const & insertInformation) const {$/;"	f	class:hot::rowex::HOTRowexInsertStackEntry
+isUsed	./HOTRowexChildPointer.hpp	/^inline bool HOTRowexChildPointer::isUsed() const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+leafNodePushDown	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline void HOTRowex<ValueType, KeyExtractor>::leafNodePushDown(typename HOTRowex<ValueType, KeyExtractor>::InsertStackEntryType & leafEntry, hot::commons::InsertInformation const & insertInformation, HOTRowexChildPointer const & valueToInsert) {$/;"	f	class:hot::rowex::HOTRowex
+leave	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^	void leave()  {$/;"	f	class:hot::rowex::ThreadSpecificEpochBasedReclamationInformation
+leaveCriticialSection	./EpochBasedMemoryReclamationStrategy.hpp	/^	void leaveCriticialSection() {$/;"	f	class:hot::rowex::EpochBasedMemoryReclamationStrategy
+lock	./SpinLock.hpp	/^	void lock() {$/;"	f	class:hot::rowex::SpinLock
+lookup	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline idx::contenthelpers::OptionalValue<ValueType> HOTRowex<ValueType, KeyExtractor>::lookup(HOTRowex<ValueType, KeyExtractor>::KeyType const &key) const {$/;"	f	class:hot::rowex::HOTRowex
+lower_bound	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline typename HOTRowex<ValueType, KeyExtractor>::const_iterator HOTRowex<ValueType, KeyExtractor>::lower_bound(typename HOTRowex<ValueType, KeyExtractor>::KeyType const & searchKey) const {$/;"	f	class:hot::rowex::HOTRowex
+mBufferState	./HOTRowexIteratorStackState.hpp	/^	int32_t mBufferState;$/;"	m	struct:hot::rowex::HOTRowexIteratorStackState
+mChildPointer	./HOTRowexInsertStackEntry.hpp	/^	HOTRowexChildPointer mChildPointer;$/;"	m	class:hot::rowex::HOTRowexInsertStackEntry
+mChildPointerLocation	./HOTRowexInsertStackEntry.hpp	/^	HOTRowexChildPointer *mChildPointerLocation;$/;"	m	class:hot::rowex::HOTRowexInsertStackEntry
+mCurrent	./HOTRowexIteratorStackEntry.hpp	/^	HOTRowexChildPointer mCurrent;$/;"	m	class:hot::rowex::HOTRowexIteratorStackEntry
+mCurrentBufferIndex	./HOTRowexIteratorBufferState.hpp	/^	size_t mCurrentBufferIndex;$/;"	m	struct:hot::rowex::HotRowexIteratorBufferState
+mCurrentBufferSize	./HOTRowexIteratorBufferState.hpp	/^	size_t mCurrentBufferSize;$/;"	m	struct:hot::rowex::HotRowexIteratorBufferState
+mCurrentBufferState	./HOTRowexIterator.hpp	/^	HotRowexIteratorBufferState<KeyType> mCurrentBufferState;$/;"	m	class:hot::rowex::HOTRowexSynchronizedIterator
+mCurrentEpoch	./EpochBasedMemoryReclamationStrategy.hpp	/^	std::atomic<uint32_t> mCurrentEpoch;$/;"	m	class:hot::rowex::EpochBasedMemoryReclamationStrategy
+mCurrentPointerLocation	./HOTRowexIteratorStackEntry.hpp	/^	HOTRowexChildPointer const * mCurrentPointerLocation;$/;"	m	class:hot::rowex::HOTRowexIteratorStackEntry
+mEnd	./HOTRowexIteratorStackEntry.hpp	/^	HOTRowexChildPointer const * mEnd;$/;"	m	class:hot::rowex::HOTRowexIteratorStackEntry
+mFirstEntry	./HOTRowexFirstInsertLevel.hpp	/^	InsertStackEntryType *mFirstEntry;$/;"	m	struct:hot::rowex::HOTRowexFirstInsertLevel
+mFlag	./SpinLock.hpp	/^	std::atomic_flag mFlag;$/;"	m	class:hot::rowex::SpinLock
+mFreeLists	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^	std::array<std::vector<HOTRowexChildPointer>, NUMBER_EPOCHS> mFreeLists;$/;"	m	class:hot::rowex::ThreadSpecificEpochBasedReclamationInformation
+mInsertInformation	./HOTRowexFirstInsertLevel.hpp	/^	hot::commons::InsertInformation mInsertInformation;$/;"	m	struct:hot::rowex::HOTRowexFirstInsertLevel
+mIsLeafNodePushdown	./HOTRowexFirstInsertLevel.hpp	/^	bool mIsLeafNodePushdown;$/;"	m	struct:hot::rowex::HOTRowexFirstInsertLevel
+mLastAccessedKey	./HOTRowexIteratorBufferState.hpp	/^	FixedSizedKeyType mLastAccessedKey;$/;"	m	struct:hot::rowex::HotRowexIteratorBufferState
+mLeafEntry	./HOTRowexInsertStack.hpp	/^	EntryType* mLeafEntry;$/;"	m	struct:hot::rowex::HOTRowexInsertStack
+mLocalEpoch	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^	std::atomic<uint32_t> mLocalEpoch;$/;"	m	class:hot::rowex::ThreadSpecificEpochBasedReclamationInformation
+mMemoryReclamation	./HOTRowexInterface.hpp	/^	EpochBasedMemoryReclamationStrategy* const mMemoryReclamation;$/;"	m	struct:hot::rowex::HOTRowex
+mMemoryReclamation	./MemoryGuard.hpp	/^	EpochBasedMemoryReclamationStrategy* mMemoryReclamation;$/;"	m	class:hot::rowex::MemoryGuard
+mMemoryReclamationStrategy	./HOTRowexIterator.hpp	/^	EpochBasedMemoryReclamationStrategy* mMemoryReclamationStrategy;$/;"	m	class:hot::rowex::HOTRowexSynchronizedIterator
+mNumberFrees	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^	static std::atomic<size_t> mNumberFrees;$/;"	m	class:hot::rowex::ThreadSpecificEpochBasedReclamationInformation
+mOther	./HOTRowexIteratorStackState.hpp	/^	HOTRowexIteratorStackState(HOTRowexIteratorStackState const &mOther) = default;$/;"	m	struct:hot::rowex::HOTRowexIteratorStackState
+mPointer	./HOTRowexChildPointerInterface.hpp	/^	std::atomic<intptr_t> mPointer;$/;"	m	class:hot::rowex::HOTRowexChildPointer
+mPreviouslyAccessedEpoch	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^	uint32_t mPreviouslyAccessedEpoch;$/;"	m	class:hot::rowex::ThreadSpecificEpochBasedReclamationInformation
+mRawBuffer	./HOTRowexIterator.hpp	/^	char mRawBuffer[sizeof(HOTRowexChildPointer) * HotRowexIteratorBufferState<KeyType>::MAXIMUM_NUMBER_NUMBER_ENTRIES_IN_BUFFER ];$/;"	m	class:hot::rowex::HOTRowexSynchronizedIterator
+mRawNodeStack	./HOTRowexIterator.hpp	/^	char mRawNodeStack[sizeof(HOTRowexIteratorStackEntry) * 64];$/;"	m	class:hot::rowex::HOTRowexSynchronizedIterator
+mRawStack	./HOTRowexInsertStack.hpp	/^	char mRawStack[64 * sizeof(EntryType)];$/;"	m	struct:hot::rowex::HOTRowexInsertStack
+mRoot	./HOTRowexInterface.hpp	/^	HOTRowexChildPointer mRoot;$/;"	m	struct:hot::rowex::HOTRowex
+mRootEntry	./HOTRowexIteratorStackState.hpp	/^	StackEntryType *mRootEntry;$/;"	m	struct:hot::rowex::HOTRowexIteratorStackState
+mRootPointerLocation	./HOTRowexIterator.hpp	/^	HOTRowexChildPointer const * mRootPointerLocation;$/;"	m	class:hot::rowex::HOTRowexSynchronizedIterator
+mSearchResultForInsert	./HOTRowexInsertStackEntry.hpp	/^	hot::commons::SearchResultForInsert mSearchResultForInsert;$/;"	m	class:hot::rowex::HOTRowexInsertStackEntry
+mStackEntry	./HOTRowexIteratorStackState.hpp	/^	StackEntryType *mStackEntry;$/;"	m	struct:hot::rowex::HOTRowexIteratorStackState
+mThreadSpecificInformations	./EpochBasedMemoryReclamationStrategy.hpp	/^	tbb::enumerable_thread_specific<ThreadSpecificEpochBasedReclamationInformation, tbb::cache_aligned_allocator<ThreadSpecificEpochBasedReclamationInformation>, tbb::ets_key_per_instance> mThreadSpecificInformations;$/;"	m	class:hot::rowex::EpochBasedMemoryReclamationStrategy
+mThreadWantsToAdvance	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^	bool mThreadWantsToAdvance;$/;"	m	class:hot::rowex::ThreadSpecificEpochBasedReclamationInformation
+markAsObsolete	./HOTRowexInsertStackEntry.hpp	/^	template<typename MemoryReclamationStrategy> void markAsObsolete(MemoryReclamationStrategy & memoryReclamation) {$/;"	f	class:hot::rowex::HOTRowexInsertStackEntry
+markAsObsolete	./HOTRowexNodeBase.hpp	/^inline void HOTRowexNodeBase::markAsObsolete() {$/;"	f	class:hot::rowex::HOTRowexNodeBase
+normalInsert	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline void HOTRowex<ValueType, KeyExtractor>::normalInsert(typename HOTRowex<ValueType, KeyExtractor>::InsertStackEntryType & currentNodeStackEntry, hot::commons::InsertInformation const & insertInformation, HOTRowexChildPointer const & valueToInsert) {$/;"	f	class:hot::rowex::HOTRowex
+operator !=	./HOTRowexChildPointer.hpp	/^inline bool HOTRowexChildPointer::operator!=(HOTRowexChildPointer const & other) const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+operator !=	./HOTRowexIterator.hpp	/^	bool operator!=(HOTRowexSynchronizedIterator<ValueType, KeyExtractor> const & other) const {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+operator *	./HOTRowexIterator.hpp	/^	inline ValueType operator*() const {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+operator ++	./HOTRowexIterator.hpp	/^	inline HOTRowexSynchronizedIterator<ValueType, KeyExtractor> & operator++() {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+operator =	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> HOTRowex<ValueType, KeyExtractor> & HOTRowex<ValueType, KeyExtractor>::operator=(HOTRowex && other) {$/;"	f	class:hot::rowex::HOTRowex
+operator =	./HOTRowexChildPointer.hpp	/^inline HOTRowexChildPointer & HOTRowexChildPointer::operator=(const HOTRowexChildPointer &other) {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+operator =	./HOTRowexIterator.hpp	/^	inline HOTRowexSynchronizedIterator<ValueType, KeyExtractor>& operator=(HOTRowexSynchronizedIterator<ValueType, KeyExtractor> const & other) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+operator ==	./HOTRowexChildPointer.hpp	/^inline bool HOTRowexChildPointer::operator==(HOTRowexChildPointer const & other) const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+operator ==	./HOTRowexIterator.hpp	/^	bool operator==(HOTRowexSynchronizedIterator<ValueType, KeyExtractor> const & other) const {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+operator delete	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> void HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::operator delete (void * rawMemory) {$/;"	f	class:hot::rowex::HOTRowexNode
+operator new	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType>  void* HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::operator new (size_t , uint16_t const numberEntries) {$/;"	f	class:hot::rowex::HOTRowexNode
+other	./HOTRowexInterface.hpp	/^	HOTRowex& operator=(HOTRowex const & other) = delete;$/;"	m	struct:hot::rowex::HOTRowex
+other	./HOTRowexInterface.hpp	/^	HOTRowex(HOTRowex const & other) = delete;$/;"	m	struct:hot::rowex::HOTRowex
+other	./HOTRowexIteratorBufferState.hpp	/^	HotRowexIteratorBufferState(HotRowexIteratorBufferState<KeyType> const & other) = default;$/;"	m	struct:hot::rowex::HotRowexIteratorBufferState
+other	./HOTRowexIteratorBufferState.hpp	/^	HotRowexIteratorBufferState<KeyType> & operator=(HotRowexIteratorBufferState<KeyType> const & other) = default;$/;"	m	struct:hot::rowex::HotRowexIteratorBufferState
+other	./MemoryGuard.hpp	/^	MemoryGuard &operator=(MemoryGuard const & other) = delete;$/;"	m	class:hot::rowex::MemoryGuard
+other	./MemoryGuard.hpp	/^	MemoryGuard(MemoryGuard const & other) = delete;$/;"	m	class:hot::rowex::MemoryGuard
+other	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^	ThreadSpecificEpochBasedReclamationInformation(ThreadSpecificEpochBasedReclamationInformation && other) =  delete;$/;"	m	class:hot::rowex::ThreadSpecificEpochBasedReclamationInformation
+other	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^	ThreadSpecificEpochBasedReclamationInformation(ThreadSpecificEpochBasedReclamationInformation const & other) = delete;$/;"	m	class:hot::rowex::ThreadSpecificEpochBasedReclamationInformation
+printPartialKeysWithMappings	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> inline void HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::printPartialKeysWithMappings($/;"	f	class:hot::rowex::HOTRowexNode
+push_back	./HOTRowexIteratorBufferState.hpp	/^	void push_back(HOTRowexChildPointer const & entryToStore) {$/;"	f	struct:hot::rowex::HotRowexIteratorBufferState
+read_memory_order	./HOTRowexChildPointerInterface.hpp	/^	static constexpr std::memory_order read_memory_order = std::memory_order_acquire;$/;"	m	class:hot::rowex::HOTRowexChildPointer
+reportInvalidResultIndex	./HOTRowexNode.hpp	/^inline void reportInvalidResultIndex(uint resultIndex, uint entryIndex) {$/;"	f	namespace:hot::rowex
+rowex	./EpochBasedMemoryReclamationStrategy.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowex.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexChildPointer.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexChildPointerInterface.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexFirstInsertLevel.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexInsertStack.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexInsertStackEntry.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexInterface.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexIterator.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexIteratorBufferState.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexIteratorBufferStates.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexIteratorEndToken.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexIteratorStackEntry.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexIteratorStackState.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexNode.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexNodeBase.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexNodeBaseInterface.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./HOTRowexNodeInterface.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./MemoryGuard.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./SpinLock.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+rowex	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^namespace hot { namespace rowex {$/;"	n	namespace:hot
+scan	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline idx::contenthelpers::OptionalValue<ValueType> HOTRowex<ValueType, KeyExtractor>::scan(HOTRowex<ValueType, KeyExtractor>::KeyType const &key, size_t numberValues) const {$/;"	f	class:hot::rowex::HOTRowex
+scheduleForDeletion	./EpochBasedMemoryReclamationStrategy.hpp	/^	void scheduleForDeletion(HOTRowexChildPointer const & childPointer) {$/;"	f	class:hot::rowex::EpochBasedMemoryReclamationStrategy
+scheduleForDeletion	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^	void scheduleForDeletion(HOTRowexChildPointer const & childPointer) {$/;"	f	class:hot::rowex::ThreadSpecificEpochBasedReclamationInformation
+search	./HOTRowexChildPointer.hpp	/^inline HOTRowexChildPointer const * HOTRowexChildPointer::search(uint8_t const * const & keyBytes) const {$/;"	f	class:hot::rowex::HOTRowexChildPointer
+search	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> inline HOTRowexChildPointer const * HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::search(uint8_t const * keyBytes) const {$/;"	f	class:hot::rowex::HOTRowexNode
+searchForInsert	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> inline HOTRowexChildPointer* HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::searchForInsert(hot::commons::SearchResultForInsert & searchResultOut, uint8_t const * keyBytes) const {$/;"	f	class:hot::rowex::HOTRowexNode
+setLastAccessedKey	./HOTRowexIteratorBufferState.hpp	/^	void setLastAccessedKey(KeyType const & lastAccessedKey) {$/;"	f	struct:hot::rowex::HotRowexIteratorBufferState
+split	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline hot::commons::BiNode<HOTRowexChildPointer> HOTRowex<ValueType, KeyExtractor>::split($/;"	f	class:hot::rowex::HOTRowex
+split	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> inline hot::commons::BiNode<HOTRowexChildPointer> HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::split($/;"	f	class:hot::rowex::HOTRowexNode
+toChildPointer	./HOTRowexNode.hpp	/^template<typename DiscriminativeBitsRepresentation, typename PartialKeyType> inline HOTRowexChildPointer HOTRowexNode<DiscriminativeBitsRepresentation, PartialKeyType>::toChildPointer() const {$/;"	f	class:hot::rowex::HOTRowexNode
+toFixedSizedKey	./HOTRowexIterator.hpp	/^	static inline FixedSizedKeyType toFixedSizedKey(KeyType const & key) {$/;"	f	class:hot::rowex::HOTRowexSynchronizedIterator
+toResult	./HOTRowexNodeBase.hpp	/^inline HOTRowexChildPointer const * HOTRowexNodeBase::toResult( uint32_t const resultMask) const {$/;"	f	class:hot::rowex::HOTRowexNodeBase
+toResult	./HOTRowexNodeBase.hpp	/^inline HOTRowexChildPointer* HOTRowexNodeBase::toResult( uint32_t const resultMask) {$/;"	f	class:hot::rowex::HOTRowexNodeBase
+toResultIndex	./HOTRowexNodeBase.hpp	/^inline unsigned int HOTRowexNodeBase::toResultIndex( uint32_t resultMask ) const {$/;"	f	class:hot::rowex::HOTRowexNodeBase
+tryLock	./HOTRowexInsertStack.hpp	/^	inline unsigned int tryLock(HOTRowexChildPointer* mRoot, HOTRowexFirstInsertLevel<EntryType> const & insertLevel) {$/;"	f	struct:hot::rowex::HOTRowexInsertStack
+tryLock	./HOTRowexInsertStackEntry.hpp	/^	bool tryLock() {$/;"	f	class:hot::rowex::HOTRowexInsertStackEntry
+tryLock	./HOTRowexNodeBase.hpp	/^inline bool HOTRowexNodeBase::tryLock() {$/;"	f	class:hot::rowex::HOTRowexNodeBase
+unlock	./HOTRowexInsertStackEntry.hpp	/^	void unlock() {$/;"	f	class:hot::rowex::HOTRowexInsertStackEntry
+unlock	./HOTRowexNodeBase.hpp	/^inline void HOTRowexNodeBase::unlock() {$/;"	f	class:hot::rowex::HOTRowexNodeBase
+unlock	./SpinLock.hpp	/^	void unlock() {$/;"	f	class:hot::rowex::SpinLock
+updateChildPointer	./HOTRowexInsertStackEntry.hpp	/^	void updateChildPointer(HOTRowexChildPointer const & childPointer) {$/;"	f	class:hot::rowex::HOTRowexInsertStackEntry
+upper_bound	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline typename HOTRowex<ValueType, KeyExtractor>::const_iterator HOTRowex<ValueType, KeyExtractor>::upper_bound(typename HOTRowex<ValueType, KeyExtractor>::KeyType const & searchKey) const {$/;"	f	class:hot::rowex::HOTRowex
+upsert	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> inline idx::contenthelpers::OptionalValue<ValueType> HOTRowex<ValueType, KeyExtractor>::upsert(ValueType newValue) {$/;"	f	class:hot::rowex::HOTRowex
+write_memory_order	./HOTRowexChildPointerInterface.hpp	/^	static constexpr std::memory_order write_memory_order = std::memory_order_release;$/;"	m	class:hot::rowex::HOTRowexChildPointer
+~HOTRowex	./HOTRowex.hpp	/^template<typename ValueType, template <typename> typename KeyExtractor> HOTRowex<ValueType, KeyExtractor>::~HOTRowex() {$/;"	f	class:hot::rowex::HOTRowex
+~MemoryGuard	./MemoryGuard.hpp	/^	~MemoryGuard() {$/;"	f	class:hot::rowex::MemoryGuard
+~ThreadSpecificEpochBasedReclamationInformation	./ThreadSpecificEpochBasedReclamationInformation.hpp	/^	~ThreadSpecificEpochBasedReclamationInformation() {$/;"	f	class:hot::rowex::ThreadSpecificEpochBasedReclamationInformation
