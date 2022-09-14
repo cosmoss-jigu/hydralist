@@ -1,0 +1,5 @@
+if(EXISTS "/home/mizuno/cpp/hydralist/hydralist/build/tests/Hydralist/MyLibTest[1]_tests.cmake")
+  include("/home/mizuno/cpp/hydralist/hydralist/build/tests/Hydralist/MyLibTest[1]_tests.cmake")
+else()
+  add_test(MyLibTest_NOT_BUILT MyLibTest_NOT_BUILT)
+endif()

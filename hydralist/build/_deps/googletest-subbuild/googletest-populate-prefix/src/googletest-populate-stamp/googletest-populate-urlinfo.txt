@@ -1,0 +1,3 @@
+repository='external project URL'
+module='https://github.com/google/googletest/archive/refs/tags/release-1.12.0.zip'
+tag=''
